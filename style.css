@@ -1,0 +1,121 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+body *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background-image{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.form-container{
+    border: 1px solid #ffffff;
+    box-shadow: 0 0 50px #ffffff;
+    width: 500px;
+    height: 350px;
+    backdrop-filter: saturate(120%) blur(3px);
+    -webkit-backdrop-filter: saturate(120%) blur(3px);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items: start;
+    padding: 20px 50px;
+}
+
+h1{
+    color: white;
+    font-size: 2.5rem;
+}
+
+.input-container{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    color: white;
+    font-size: 1.2rem;
+    position: absolute;
+    cursor: text;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.input-text{
+    height: 30px;
+    font-size: 1.2rem;
+    background: none;
+    border: none;
+    color: white;
+    border-bottom: 1px solid #ffffff;
+    padding: 0 0 6px 0;
+}
+
+.input-text:focus{
+    outline: none;
+}
+
+.input-container:focus-within .label-username, .input-container:focus-within .label-password{
+    transform: translateY(-20px);
+    font-size: 1.0rem;
+    color: #ffffff;
+    transition: all 0.1s ease;
+}
+
+.input-container:not(:focus-within) .label-username, .input-container:not(:focus-within) .label-password {
+    transform: translateY(0);
+    font-size: 1.2rem;
+    transition: all 0.1s ease;
+}
+
+.input-button{
+    width: 100%;
+    height: 40px;
+    background: none;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.1s ease;
+}
+
+.input-button:hover{
+    background: #ffffff2f;
+}
+
+/* my logo */
+
+.logo-wad{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    filter: brightness(200%);
+}
