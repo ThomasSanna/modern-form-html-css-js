@@ -1,7 +1,7 @@
 let inputs = [...document.querySelectorAll(".input-text")];
 
 
-function checkInputValue(input) {
+function checkOnChangeValue(input) {
     inputs.forEach(input => {
         if(input.value !== "") {
             input.previousSibling.previousSibling.classList.add("active");
@@ -10,4 +10,4 @@ function checkInputValue(input) {
             input.previousSibling.previousSibling.classList.remove("active");
         }
     });
-}
+} 
